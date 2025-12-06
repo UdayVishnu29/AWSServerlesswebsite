@@ -1,8 +1,7 @@
-# Get AWS Account ID and Region
+
 data "aws_caller_identity" "current" {}
 data "aws_region" "current" {}
 
-# Create random suffix for unique resource names
 resource "random_id" "suffix" {
   byte_length = 4
 }
